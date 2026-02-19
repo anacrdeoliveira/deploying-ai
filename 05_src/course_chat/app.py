@@ -21,7 +21,7 @@ def course_chat(message: str, history: list[dict]) -> str:
             langchain_messages.append(HumanMessage(content=msg['content']))
         elif msg['role'] == 'assistant':
             langchain_messages.append(AIMessage(content=msg['content']))
-            n += 1
+        n += 1
     langchain_messages.append(HumanMessage(content=message))
 
     state = {
